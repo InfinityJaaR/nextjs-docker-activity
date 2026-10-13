@@ -1,0 +1,51 @@
+# Dependencias: se instalan dentro de la imagen con `npm ci`
+node_modules
+.pnp
+.pnp.*
+
+# Salidas de build: se generan dentro de la imagen con `next build`
+.next
+out
+build
+coverage
+
+# Variables de entorno y secretos: nunca deben quedar dentro de la imagen
+.env
+.env.*
+*.pem
+
+# Control de versiones
+.git
+.gitignore
+
+# Archivos de Docker (no se necesitan dentro del contexto de build)
+Dockerfile
+.dockerignore
+docker-compose*.yml
+compose*.yml
+
+# Logs y archivos temporales
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+*.tmp
+*.temp
+tmp
+temp
+*.tsbuildinfo
+next-env.d.ts
+
+# Editores y sistema operativo
+.vscode
+.idea
+*.swp
+.DS_Store
+Thumbs.db
+
+# Documentación y archivos de despliegue no necesarios en la imagen
+README.md
+AGENTS.md
+docs
+.vercel
